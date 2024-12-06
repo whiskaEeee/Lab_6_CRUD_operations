@@ -1,0 +1,33 @@
+﻿@model List<Department>
+
+<table class="table table-striped">
+    <thead>
+        <tr class="text-center">
+            <th class="py-3" scope="col">Номер_отдела</th>
+            <th class="py-3" scope="col">Название_отдела</th>
+            <th class="py-3" scope="col">Номер_магазина</th>
+            <th class="py-3" scope="col">Табельный_номер_заведующего</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr class="text-center">
+                <td class="py-3">@item.DepartmentId</td>
+                <td class="py-3">@item.DepartmentName</td>
+                <td class="py-3">@item.StoreId</td>
+                <td class="py-3">@item.DirectorId</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2 d-flex justify-content-center" style="background-color: #202224;">
+            <a asp-controller="Database" asp-action="CreateDepartment">
+                <p class="text-white fst-normal my-3">CREATE</p>
+            </a>
+        </div>
+    </div>
+</div>

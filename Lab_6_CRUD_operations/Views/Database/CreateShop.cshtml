@@ -1,0 +1,34 @@
+﻿@model Store
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Store</h2>
+            <hr/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="StoreName"></label>
+            <input asp-for="StoreName" type="text" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Specialization"></label>
+            <input asp-for="Specialization" type="text" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="INN"></label>
+            <input asp-for="INN" type="text" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" type="text" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="DirectorId"></label>
+            <input asp-for="DirectorId" type="text" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 150px">Create</button>
+        <a asp-controller="Database" asp-action="shop" class="btn btn-secondary" style="width: 150px">
+            Back To List
+        </a>
+    </div>
+</form>

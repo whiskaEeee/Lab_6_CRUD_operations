@@ -1,0 +1,26 @@
+﻿@model Department
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Store</h2>
+            <hr/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DepartmentName"></label>
+            <input asp-for="DepartmentName" type="text" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="StoreId"></label>
+            <input asp-for="StoreId" type="text" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="DirectorId"></label>
+            <input asp-for="DirectorId" type="text" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 150px">Create</button>
+        <a asp-controller="Database" asp-action="department" class="btn btn-secondary" style="width: 150px">
+            Back To List
+        </a>
+    </div>
+</form>
