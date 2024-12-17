@@ -27,7 +27,7 @@ namespace Lab_6_CRUD_operations.Models
 
         [MaxLength(255)]
         [Column("Адрес")]
-        public string Adress { get; set; }
+        public string Address { get; set; }
 
         [MaxLength(50)]
         [Column("Пол_семейное_положение")]

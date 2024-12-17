@@ -4,8 +4,9 @@
     <div class="border p-3 mt-4">
         <div class="row pb-2">
             <h2 class="text-primary">Create Department</h2>
-            <hr/>
+            <hr />
         </div>
+        <input type="hidden" asp-for="DepartmentId" />
         <div class="mb-3">
             <label asp-for="DepartmentName"></label>
             <input asp-for="DepartmentName" type="text" class="form-control" />
@@ -18,7 +19,7 @@
             <label asp-for="DirectorId"></label>
             <input asp-for="DirectorId" type="text" class="form-control" />
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 150px">Create</button>
+        <button type="submit" class="btn btn-warning" style="width: 150px">Edit</button>
         <a asp-controller="Database" asp-action="department" class="btn btn-secondary" style="width: 150px">
             Back To List
         </a>

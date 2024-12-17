@@ -6,7 +6,7 @@
             <th class="py-3" scope="col">Номер_отдела</th>
             <th class="py-3" scope="col">Название_отдела</th>
             <th class="py-3" scope="col">Номер_магазина</th>
-            <th class="py-3" scope="col">Табельный_номер_заведующего</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +17,12 @@
                 <td class="py-3">@item.DepartmentName</td>
                 <td class="py-3">@item.StoreId</td>
                 <td class="py-3">@item.DirectorId</td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Database" asp-action="EditDepartment" asp-route-id="@item.DepartmentId" class="btn btn-warning mx-3">Edit</a>
+                        <a asp-controller="Database" asp-action="DeleteDepartment" asp-route-id="@item.DepartmentId" class="btn btn-danger">Delete</a>
+                    </div>
+                </td>
             </tr>
         }
     </tbody>

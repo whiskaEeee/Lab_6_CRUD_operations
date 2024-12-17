@@ -1,0 +1,48 @@
+﻿@model List<Employee>
+
+<table class="table table-striped">
+    <thead>
+        <tr class="text-center">
+            <th class="py-3" scope="col">Табельный_номер_сотрудника</th>
+            <th class="py-3" scope="col">Фамилия</th>
+            <th class="py-3" scope="col">Имя</th>
+            <th class="py-3" scope="col">Отчество</th>
+            <th class="py-3"  scope="col">Адрес</th>
+            <th class="py-3" scope="col">Пол_семейное_положение</th>
+            <th class="py-3" scope="col">Дата_рождения</th>
+            <th class="py-3" scope="col">Номер_отдела</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr class="text-center">
+                <td class="py-3">@item.EmployeeId</td>
+                <td class="py-3">@item.Surname</td>
+                <td class="py-3">@item.Name</td>
+                <td class="py-3">@item.Otchestvo</td>
+                <td class="py-3">@item.Address</td>
+                <td class="py-3">@item.Gender</td>
+                <td class="py-3">@item.DateOfBirth</td>
+                <td class="py-3">@item.DepartmentId</td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Database" asp-action="EditEmployee" asp-route-id="@item.EmployeeId" class="btn btn-warning mx-3">Edit</a>
+                        <a asp-controller="Database" asp-action="DeleteEmployee" asp-route-id="@item.EmployeeId" class="btn btn-danger">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2 d-flex justify-content-center" style="background-color: #202224;">
+            <a asp-controller="Database" asp-action="CreateEmployee">
+                <p class="text-white fst-normal my-3">CREATE</p>
+            </a>
+        </div>
+    </div>
+</div>
