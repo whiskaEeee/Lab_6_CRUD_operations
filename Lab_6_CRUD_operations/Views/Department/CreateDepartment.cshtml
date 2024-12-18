@@ -9,17 +9,20 @@
         <div class="mb-3">
             <label asp-for="DepartmentName"></label>
             <input asp-for="DepartmentName" type="text" class="form-control" />
+            <span asp-validation-for="DepartmentName" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="StoreId"></label>
             <input asp-for="StoreId" type="text" class="form-control" />
+            <span asp-validation-for="StoreId" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="DirectorId"></label>
             <input asp-for="DirectorId" type="text" class="form-control" />
+            <span asp-validation-for="DirectorId" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary" style="width: 150px">Create</button>
-        <a asp-controller="Database" asp-action="department" class="btn btn-secondary" style="width: 150px">
+        <a asp-controller="Department" asp-action="department" class="btn btn-secondary" style="width: 150px">
             Back To List
         </a>
     </div>

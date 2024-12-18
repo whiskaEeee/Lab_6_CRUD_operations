@@ -19,6 +19,7 @@ namespace Lab_6_CRUD_operations.Models
         public string Specialization { get; set; }
         [Column("ИНН")]
         [MaxLength(20)]
+        [Range(1000000000, 9999999999)]
         public string INN { get; set; }
         [Column("Адрес")]
         [MaxLength(255)]

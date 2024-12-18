@@ -28,8 +28,8 @@
                 <td class="py-3">@item.DepartmentId</td>
                 <td>
                     <div class="w-75 btn-group" role="group">
-                        <a asp-controller="Database" asp-action="EditEmployee" asp-route-id="@item.EmployeeId" class="btn btn-warning mx-3">Edit</a>
-                        <a asp-controller="Database" asp-action="DeleteEmployee" asp-route-id="@item.EmployeeId" class="btn btn-danger">Delete</a>
+                        <a asp-controller="Employee" asp-action="EditEmployee" asp-route-id="@item.EmployeeId" class="btn btn-warning mx-3">Edit</a>
+                        <a asp-controller="Employee" asp-action="DeleteEmployee" asp-route-id="@item.EmployeeId" class="btn btn-danger">Delete</a>
                     </div>
                 </td>
             </tr>
@@ -40,7 +40,7 @@
 <div class="container">
     <div class="row">
         <div class="col-2 d-flex justify-content-center" style="background-color: #202224;">
-            <a asp-controller="Database" asp-action="CreateEmployee">
+            <a asp-controller="Employee" asp-action="CreateEmployee">
                 <p class="text-white fst-normal my-3">CREATE</p>
             </a>
         </div>

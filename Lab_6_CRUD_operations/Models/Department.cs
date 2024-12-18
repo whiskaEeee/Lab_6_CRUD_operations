@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Lab_6_CRUD_operations.Data;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -27,6 +28,9 @@ namespace Lab_6_CRUD_operations.Models
 
         public virtual ICollection<Employee> Employees { get; set; }
         public virtual ICollection<Product> Products { get; set; }
+
+
+
     }
 
 

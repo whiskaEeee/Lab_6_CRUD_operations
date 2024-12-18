@@ -31,9 +31,11 @@ namespace Lab_6_CRUD_operations.Models
 
         [MaxLength(50)]
         [Column("Пол_семейное_положение")]
+        [RegularExpression(@"^(female|male)$", ErrorMessage = "Значение должно быть 'Муж' или 'Жен'")]
         public string Gender { get; set; }
 
         [Column("Дата_рождения")]
+        [Range(typeof(DateTime), "01/01/1900", "01/01/2025", ErrorMessage = "Дата рождения должна быть в пределах с 01.01.1900 по 01.01.2025")]
         public DateTime? DateOfBirth { get; set; }
 
         [ForeignKey("Department")]
